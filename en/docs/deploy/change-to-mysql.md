@@ -35,7 +35,7 @@ A sample configuration is given below.
         [database.identity_db]
         type = "mysql"
         hostname = "localhost"
-        name = "regdb"
+        name = "regdb?useSSL=false"
         username = "regadmin"
         password = "regadmin"
         port = "3306"
@@ -57,7 +57,7 @@ A sample configuration is given below.
         [database.shared_db]
         type = "mysql"
         hostname = "localhost"
-        name = "regdb"
+        name = "regdb?useSSL=false"
         username = "regadmin"
         password = "regadmin"
         port = "3306"
@@ -73,7 +73,7 @@ A sample configuration is given below.
                 
     ``` toml
     type = "mysql"
-    url = "jdbc:mysql://localhost:3306/regdb"
+    url = "jdbc:mysql://localhost:3306/regdb?useSSL=false"
     username = "regadmin"
     password = "regadmin"
     ```  
