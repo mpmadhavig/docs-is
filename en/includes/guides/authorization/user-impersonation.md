@@ -197,25 +197,24 @@ Subject token is a JWT token that contains information on both the impersonated 
 === "Request Format"
 
     ``` bash
-    https://{{base_url}}/oauth2/authorize?
+    {{base_url}}/oauth2/authorize?
       client_id={clientID}
-      redirect_uri={redirect_uri}
+      &redirect_uri={redirect_uri}
       &state={sample_state}
-      &scope=internal_user_impersonate,{other_Required_Scopes}
+      &scope=internal_user_impersonate {other_Required_Scopes}
       &response_type={response_type}
       &requested_subject={userid_of_the_end_user}
       &nonce={nonce}
-
     ```
 
 === "Sample Request"
-    
+
     ``` bash
-    https://{{base_url_sample}}/oauth2/authorize?
+    {{base_url_sample}}/oauth2/authorize?
       client_id=jVcW4oLn1Jjb2T94H4gtPV9z5Y0a
       &redirect_uri=https://oauth.pstmn.io/v1/callback
       &state=sample_state
-      &scope=internal_user_impersonate,openid,internal_org_user_mgt_view
+      &scope=internal_user_impersonate openid internal_org_user_mgt_view
       &response_type=id_token subject_token
       &requested_subject=32bc4697-ed0f-4546-8387-dcd6403e7caa
       &nonce=2131232
